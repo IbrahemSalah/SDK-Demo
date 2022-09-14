@@ -6,11 +6,17 @@ import com.android.iolpaymentsdk.data.model.APIResult
 import com.android.iolpaymentsdk.data.repositories.Repository
 import com.android.iolpaymentsdk.ui.base.BaseViewModel
 import com.android.iolpaymentsdk.ui.paymentsdk.IOLPaymentSDKHandler
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 
 class PaymentViewModel(
     private val repository: Repository,
 ) : BaseViewModel() {
+
+    private var _paymentResponseState = Channel<PaymentResponseState>(Channel.BUFFERED)
+    val paymentResponseState get() = _paymentResponseState.receiveAsFlow()
+
 
     fun onPrePayment() {
         IOLPaymentSDKHandler.mIOLPaymentSDKCallbacks.onPrePayment()
@@ -34,13 +40,14 @@ class PaymentViewModel(
 
             when (val response = repository.getDiscoverMovieList()) {
                 is APIResult.Failure -> {
-
-                    val result = response
-
+                    response.error?.message?.let {
+                        _paymentResponseState.trySend(PaymentResponseState.Failure(response.error.message))
+                    }
                 }
                 is APIResult.Success -> {
-
-                    Log.i("API Response", response.body?.results.toString())
+                    response.body?.results?.let {
+                        _paymentResponseState.trySend(PaymentResponseState.Failure(response.body.results.size.toString()))
+                    }
                 }
             }
         }
