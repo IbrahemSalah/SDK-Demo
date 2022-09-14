@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-parcelize'
     id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-kapt'
+    id 'maven-publish'
 }
 
 android {
@@ -118,4 +119,18 @@ dependencies {
     api "androidx.navigation:navigation-dynamic-features-fragment:${nav_version}"
 
 
+}
+
+afterEvaluate {
+    publishing{
+        publications {
+            release(MavenPublication){
+                from components.dummyRelease
+
+                groupId = 'com.github.IbrahemSalah'
+                artifactId = 'sdk-demo'
+                version = '0.0.1'
+            }
+        }
+    }
 }
