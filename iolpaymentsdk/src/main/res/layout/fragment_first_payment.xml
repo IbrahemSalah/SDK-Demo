@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.android.iolpaymentsdk.ui.paymentsdk.ui.FirstPaymentFragment">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="24dp"
+        android:text="Start Payment SDK" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:id="@+id/btn_pre_payment"
+        android:layout_gravity="center"
+        android:text="Call On PrePayment" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_payment_success"
+        android:layout_margin="24dp"
+        android:layout_gravity="center"
+        android:text="Call On Payment Success" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:id="@+id/btn_payment_failure"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:layout_gravity="center"
+        android:text="Call On Payment Failure" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

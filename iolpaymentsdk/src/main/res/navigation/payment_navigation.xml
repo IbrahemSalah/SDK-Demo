@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/payment_navigation"
+    app:startDestination="@id/firstPaymentFragment">
+
+    <fragment
+        android:id="@+id/firstPaymentFragment"
+        android:name="com.android.iolpaymentsdk.ui.paymentsdk.ui.FirstPaymentFragment"
+        android:label="first_payment_fragment"
+        tools:layout="@layout/fragment_first_payment" />
+
+</navigation>

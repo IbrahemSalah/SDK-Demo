@@ -1,0 +1,4 @@
+rootProject.name = "IOL Pay Payment"
+include ':app'
+include ':localization'
+include ':iolpaymentsdk'
