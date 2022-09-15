@@ -9,7 +9,7 @@
     <application>
 
         <activity
-            android:name="com.android.iolpaymentsdk.ui.paymentsdk.ui.PaymentActivity"
+            android:name="com.android.iolpaymentsdk.ui.paymentsdk.ui.IOLPaymentActivity"
             android:exported="false" />
     </application>
 

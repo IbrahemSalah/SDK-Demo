@@ -1,20 +1,19 @@
 package com.android.iolpaymentsdk.ui.paymentsdk.ui
 
-import android.util.Log
 import androidx.lifecycle.viewModelScope
 import com.android.iolpaymentsdk.data.model.APIResult
 import com.android.iolpaymentsdk.data.repositories.Repository
-import com.android.iolpaymentsdk.ui.base.BaseViewModel
+import com.android.iolpaymentsdk.ui.base.IOLBaseViewModel
 import com.android.iolpaymentsdk.ui.paymentsdk.IOLPaymentSDKHandler
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 
-class PaymentViewModel(
+class IOLPaymentViewModelIOL(
     private val repository: Repository,
-) : BaseViewModel() {
+) : IOLBaseViewModel() {
 
-    private var _paymentResponseState = Channel<PaymentResponseState>(Channel.BUFFERED)
+    private var _paymentResponseState = Channel<IOLPaymentResponseState>(Channel.BUFFERED)
     val paymentResponseState get() = _paymentResponseState.receiveAsFlow()
 
 
@@ -41,12 +40,12 @@ class PaymentViewModel(
             when (val response = repository.getDiscoverMovieList()) {
                 is APIResult.Failure -> {
                     response.error?.message?.let {
-                        _paymentResponseState.trySend(PaymentResponseState.Failure(response.error.message))
+                        _paymentResponseState.trySend(IOLPaymentResponseState.Failure(response.error.message))
                     }
                 }
                 is APIResult.Success -> {
                     response.body?.results?.let {
-                        _paymentResponseState.trySend(PaymentResponseState.Failure(response.body.results.size.toString()))
+                        _paymentResponseState.trySend(IOLPaymentResponseState.Failure(response.body.results.size.toString()))
                     }
                 }
             }

@@ -2,18 +2,12 @@ package com.android.iolpaymentsdk.ui.base
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
 import androidx.viewbinding.ViewBinding
-import com.android.iolpaymentsdk.R
-import com.android.iolpaymentsdk.data.model.FailureException
 import com.android.iolpaymentsdk.util.CustomProgressDialog
 import com.android.iolpaymentsdk.util.NetworkStateManager
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
 
-open class BaseViewModelFragment<VB : ViewBinding> : BaseFragment<VB>() {
+open class IOLBaseViewModelFragment<VB : ViewBinding> : IOLBaseFragment<VB>() {
 
 
     private val progressdialog = CustomProgressDialog()

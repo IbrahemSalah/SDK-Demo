@@ -7,8 +7,8 @@
 
     <fragment
         android:id="@+id/firstPaymentFragment"
-        android:name="com.android.iolpaymentsdk.ui.paymentsdk.ui.FirstPaymentFragment"
+        android:name="com.android.iolpaymentsdk.ui.paymentsdk.ui.IOLFirstPaymentFragmentIOL"
         android:label="first_payment_fragment"
-        tools:layout="@layout/fragment_first_payment" />
+        tools:layout="@layout/iol_fragment_first_payment" />
 
 </navigation>

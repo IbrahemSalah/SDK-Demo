@@ -8,7 +8,7 @@ import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
 
-val repositoryModule = module {
+val iolRepositoryModule = module {
     single<RemoteDataSource>  (named("iol-RemoteDataSource")) {
         return@single RemoteDataSourceImp(get(named("iol-provideApiService")))
     }

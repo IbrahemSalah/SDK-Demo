@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
 @Suppress("PropertyName")
-open class BaseFragment<VB : ViewBinding> : Fragment() {
+open class IOLBaseFragment<VB : ViewBinding> : Fragment() {
 
     protected var _binding: VB? = null
     protected val binding: VB get() = _binding as VB

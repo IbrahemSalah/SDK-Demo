@@ -6,24 +6,24 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
-import com.android.iolpaymentsdk.databinding.FragmentFirstPaymentBinding
+import com.android.iolpaymentsdk.databinding.IolFragmentFirstPaymentBinding
 import com.android.iolpaymentsdk.di.SDKKoinComponent
-import com.android.iolpaymentsdk.ui.base.BaseViewModelFragment
+import com.android.iolpaymentsdk.ui.base.IOLBaseViewModelFragment
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-class FirstPaymentFragment :
-    BaseViewModelFragment<FragmentFirstPaymentBinding>(), SDKKoinComponent {
+class IOLFirstPaymentFragmentIOL :
+    IOLBaseViewModelFragment<IolFragmentFirstPaymentBinding>(), SDKKoinComponent {
 
-    private val viewModel by viewModel<PaymentViewModel>()
+    private val viewModel by viewModel<IOLPaymentViewModelIOL>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentFirstPaymentBinding.inflate(layoutInflater)
+        _binding = IolFragmentFirstPaymentBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -42,10 +42,10 @@ class FirstPaymentFragment :
 
         viewModel.paymentResponseState.onEach {
             when (it) {
-                is PaymentResponseState.Failure -> {
+                is IOLPaymentResponseState.Failure -> {
                     Toast.makeText(context, it.error, Toast.LENGTH_SHORT).show()
                 }
-                is PaymentResponseState.Success -> {
+                is IOLPaymentResponseState.Success -> {
                     Toast.makeText(context, it.response, Toast.LENGTH_SHORT).show()
                 }
             }

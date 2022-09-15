@@ -1,10 +1,10 @@
 package com.android.iolpaymentsdk.di
 
 import android.content.Context
-import com.android.iolpaymentsdk.di.modules.appModule
-import com.android.iolpaymentsdk.di.modules.networkModule
-import com.android.iolpaymentsdk.di.modules.repositoryModule
-import com.android.iolpaymentsdk.di.modules.viewModelModule
+import com.android.iolpaymentsdk.di.modules.iolAppModule
+import com.android.iolpaymentsdk.di.modules.iolNetworkModule
+import com.android.iolpaymentsdk.di.modules.iolRepositoryModule
+import com.android.iolpaymentsdk.di.modules.iolViewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.Koin
 import org.koin.core.KoinApplication
@@ -38,10 +38,10 @@ object IOLPaymentSDK {
 }
 
 val modulesList = arrayListOf(
-    appModule,
-    networkModule,
-    viewModelModule,
-    repositoryModule
+    iolAppModule,
+    iolNetworkModule,
+    iolViewModelModule,
+    iolRepositoryModule
 )
 
 // Custom KoinComponent

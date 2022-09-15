@@ -24,7 +24,7 @@ class CustomProgressDialog {
 
     fun show(context: Context, title: CharSequence?): Dialog {
         val inflater = (context as Activity).layoutInflater
-        val view = inflater.inflate(R.layout.progress_dialog_view, null)
+        val view = inflater.inflate(R.layout.iol_progress_dialog_view, null)
 
         val cp_title:TextView = view.findViewById(R.id.cp_title)
         val cp_cardview: CardView = view.findViewById(R.id.cp_cardview)

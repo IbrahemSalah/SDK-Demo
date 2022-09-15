@@ -4,6 +4,6 @@ import com.android.iolpaymentsdk.data.SessionManager
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
-val appModule = module {
+val iolAppModule = module {
     single  { SessionManager.getInstance(get(named("iol-Repository"))) }
 }

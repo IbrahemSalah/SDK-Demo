@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import java.util.*
 
 
-open class BaseActivity : AppCompatActivity() {
+open class IOLBaseActivity : AppCompatActivity() {
 
 
 

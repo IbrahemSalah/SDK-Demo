@@ -2,11 +2,11 @@ package com.android.iolpaymentsdk.ui.paymentsdk.ui
 
 import android.os.Bundle
 import com.android.iolpaymentsdk.R
-import com.android.iolpaymentsdk.ui.base.BaseActivity
+import com.android.iolpaymentsdk.ui.base.IOLBaseActivity
 
-class PaymentActivity : BaseActivity() {
+class IOLPaymentActivity : IOLBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_payment)
+        setContentView(R.layout.iol_activity_payment)
     }
 }
