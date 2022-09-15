@@ -17,9 +17,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BaseAndroidApp">
         <activity
-            android:name="com.android.iolpaymentsdk.ui.paymentsdk.ui.PaymentActivity"
-            android:exported="false" />
-        <activity
             android:name="com.android.iolpayment.ui.prepayment.PrePaymentActivity"
             android:exported="true">
             <intent-filter>
