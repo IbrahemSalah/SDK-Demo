@@ -12,6 +12,11 @@
 #   public *;
 #}
 
+-keep public class com.android.iolpaymentsdk.ui.paymentsdk.IOLPaymentSDKHandler
+-keep public class com.android.iolpaymentsdk.di.IOLPaymentSDK
+
+
+
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
 #-keepattributes SourceFile,LineNumberTable

@@ -6,7 +6,6 @@ import android.content.res.Configuration
 import com.akexorcist.localizationactivity.core.LocalizationApplicationDelegate
 import com.android.iolpayment.di.modules.*
 import com.android.iolpaymentsdk.di.IOLPaymentSDK
-import com.android.iolpaymentsdk.ui.paymentsdk.IOLPaymentSDKHandler
 import com.android.iolpaymentsdk.util.NetworkMonitoringUtil
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
