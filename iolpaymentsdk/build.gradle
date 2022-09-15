@@ -122,9 +122,9 @@ dependencies {
 }
 
 afterEvaluate {
-    publishing{
+    publishing {
         publications {
-            release(MavenPublication){
+            release(MavenPublication) {
                 from components.dummyRelease
 
                 groupId = 'com.github.IbrahemSalah'

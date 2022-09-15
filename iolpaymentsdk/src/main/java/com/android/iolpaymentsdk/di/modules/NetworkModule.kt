@@ -7,19 +7,20 @@ import com.android.iolpaymentsdk.util.NetworkHelper
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidApplication
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 val networkModule = module {
-    single { provideOkHttpClient() }
+    single(named("iol-provideOkHttpClient")) { provideOkHttpClient() }
 
-    single { provideRetrofit(get()) }
+    single (named("iol-provideRetrofit")){ provideRetrofit(get(named("iol-provideOkHttpClient"))) }
 
-    single { provideApiService(get()) }
+    single(named("iol-provideApiService")) { provideApiService(get(named("iol-provideRetrofit"))) }
 
-    single { provideNetworkHelper(androidApplication()) }
+    single (named("iol-provideNetworkHelper")){ provideNetworkHelper(androidApplication()) }
 
 }
 
