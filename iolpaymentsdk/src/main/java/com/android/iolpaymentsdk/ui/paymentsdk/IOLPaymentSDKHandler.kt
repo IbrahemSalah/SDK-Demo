@@ -2,8 +2,10 @@ package com.android.iolpaymentsdk.ui.paymentsdk
 
 import android.app.Activity
 import android.content.Intent
+import androidx.annotation.Keep
 import com.android.iolpaymentsdk.ui.paymentsdk.ui.IOLPaymentActivity
 
+@Keep
 object IOLPaymentSDKHandler {
 
     lateinit var mIOLPaymentSDKCallbacks: IOLPaymentSDKCallbacks

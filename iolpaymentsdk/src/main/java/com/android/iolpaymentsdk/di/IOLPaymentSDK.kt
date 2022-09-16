@@ -1,6 +1,7 @@
 package com.android.iolpaymentsdk.di
 
 import android.content.Context
+import androidx.annotation.Keep
 import com.android.iolpaymentsdk.di.modules.iolAppModule
 import com.android.iolpaymentsdk.di.modules.iolNetworkModule
 import com.android.iolpaymentsdk.di.modules.iolRepositoryModule
@@ -11,6 +12,7 @@ import org.koin.core.KoinApplication
 import org.koin.core.component.KoinComponent
 import org.koin.dsl.koinApplication
 
+@Keep
 object IOLPaymentSDK {
 
     internal var app: KoinApplication? = null
