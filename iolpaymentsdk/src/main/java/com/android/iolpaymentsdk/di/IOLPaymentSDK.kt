@@ -12,6 +12,7 @@ import org.koin.core.component.KoinComponent
 import org.koin.dsl.koinApplication
 
 object IOLPaymentSDK {
+
     internal var app: KoinApplication? = null
 
     @JvmStatic
