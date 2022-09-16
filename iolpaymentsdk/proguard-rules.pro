@@ -12,8 +12,8 @@
 #   public *;
 #}
 
-#-keep class com.android.iolpaymentsdk.ui.paymentsdk.IOLPaymentSDKHandler
-#-keep class com.android.iolpaymentsdk.di.IOLPaymentSDK
+-keep class com.android.iolpaymentsdk.ui.paymentsdk.IOLPaymentSDKHandler
+-keep class com.android.iolpaymentsdk.di.IOLPaymentSDK
 
 
 
