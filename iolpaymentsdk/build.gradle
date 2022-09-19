@@ -16,8 +16,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        consumerProguardFiles 'proguard-rules.pro'
-
+        consumerProguardFiles 'iol-proguard-rules.pro'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
