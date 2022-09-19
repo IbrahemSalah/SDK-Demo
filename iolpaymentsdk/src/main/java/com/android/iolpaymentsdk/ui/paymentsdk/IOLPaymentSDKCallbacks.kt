@@ -1,8 +1,8 @@
 package com.android.iolpaymentsdk.ui.paymentsdk
 
-import androidx.annotation.Keep
+import com.google.android.gms.common.annotation.KeepForSdk
 
-@Keep
+@KeepForSdk
 interface IOLPaymentSDKCallbacks {
 
     fun onPrePayment()
