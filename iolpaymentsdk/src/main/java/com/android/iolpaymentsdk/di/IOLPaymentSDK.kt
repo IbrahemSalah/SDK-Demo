@@ -1,16 +1,20 @@
 package com.android.iolpaymentsdk.di
 
 import android.content.Context
+import androidx.annotation.Keep
 import com.android.iolpaymentsdk.di.modules.iolAppModule
 import com.android.iolpaymentsdk.di.modules.iolNetworkModule
 import com.android.iolpaymentsdk.di.modules.iolRepositoryModule
 import com.android.iolpaymentsdk.di.modules.iolViewModelModule
+import com.google.android.gms.common.annotation.KeepName
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.Koin
 import org.koin.core.KoinApplication
 import org.koin.core.component.KoinComponent
 import org.koin.dsl.koinApplication
 
+@Keep
+@KeepName
 object IOLPaymentSDK {
 
     internal var app: KoinApplication? = null
