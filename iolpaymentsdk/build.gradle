@@ -16,7 +16,9 @@ android {
         versionCode 1
         versionName "1.0"
 
-        consumerProguardFiles 'iol-proguard-rules.pro'
+        consumerProguardFiles 'iol-consumer-proguard-rules'
+        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'iol-proguard-rules'
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -34,12 +36,10 @@ android {
 
         debug {
             minifyEnabled false
-            consumerProguardFiles 'iol-proguard-rules.pro'
         }
 
         release {
             minifyEnabled true
-            consumerProguardFiles 'iol-proguard-rules.pro'
         }
 
     }
