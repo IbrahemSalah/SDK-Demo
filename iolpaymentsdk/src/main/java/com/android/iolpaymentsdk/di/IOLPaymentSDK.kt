@@ -14,7 +14,6 @@ import org.koin.core.component.KoinComponent
 import org.koin.dsl.koinApplication
 
 @Keep
-@KeepName
 object IOLPaymentSDK {
 
     internal var app: KoinApplication? = null

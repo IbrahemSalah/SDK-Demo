@@ -4,10 +4,8 @@ import android.app.Activity
 import android.content.Intent
 import androidx.annotation.Keep
 import com.android.iolpaymentsdk.ui.paymentsdk.ui.IOLPaymentActivity
-import com.google.android.gms.common.annotation.KeepName
 
 @Keep
-@KeepName
 object IOLPaymentSDKHandler {
 
     lateinit var mIOLPaymentSDKCallbacks: IOLPaymentSDKCallbacks

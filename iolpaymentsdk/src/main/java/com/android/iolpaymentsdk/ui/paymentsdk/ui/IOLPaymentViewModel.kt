@@ -9,7 +9,7 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 
-class IOLPaymentViewModelIOL(
+class IOLPaymentViewModel(
     private val repository: Repository,
 ) : IOLBaseViewModel() {
 

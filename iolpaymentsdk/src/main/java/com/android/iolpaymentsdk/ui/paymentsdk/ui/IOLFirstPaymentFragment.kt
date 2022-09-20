@@ -14,10 +14,10 @@ import kotlinx.coroutines.flow.onEach
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-class IOLFirstPaymentFragmentIOL :
+class IOLFirstPaymentFragment :
     IOLBaseViewModelFragment<IolFragmentFirstPaymentBinding>(), SDKKoinComponent {
 
-    private val viewModel by viewModel<IOLPaymentViewModelIOL>()
+    private val viewModel by viewModel<IOLPaymentViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

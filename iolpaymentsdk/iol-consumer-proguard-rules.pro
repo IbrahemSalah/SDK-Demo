@@ -15,6 +15,7 @@
 #-keep class com.android.iolpaymentsdk.ui.paymentsdk.IOLPaymentSDKHandler
 #-keep class com.android.iolpaymentsdk.di.IOLPaymentSDK
 #-keep interface com.android.iolpaymentsdk.ui.paymentsdk.IOLPaymentSDKCallbacks
+-keepnames class androidx.navigation.fragment.NavHostFragment
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
