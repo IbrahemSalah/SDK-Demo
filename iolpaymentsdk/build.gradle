@@ -8,20 +8,6 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        debug {
-            storeFile file('C:\\Users\\Dell\\Desktop\\Android Demo SDK\\sdk_test.jks')
-            storePassword '123456'
-            keyPassword '123456'
-            keyAlias 'sdk_test'
-        }
-        dummyRelease {
-            keyAlias 'sdk_test'
-            storePassword '123456'
-            keyPassword '123456'
-            storeFile file('C:\\Users\\Dell\\Desktop\\Android Demo SDK\\sdk_test.jks')
-        }
-    }
     compileSdk 32
     buildToolsVersion "30.0.3"
 

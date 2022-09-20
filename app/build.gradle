@@ -7,20 +7,6 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        debug {
-            storeFile file('C:\\Users\\Dell\\Desktop\\Android Demo SDK\\sdk_test.jks')
-            keyAlias 'sdk_test'
-            storePassword '123456'
-            keyPassword '123456'
-        }
-        dummyRelease {
-            storeFile file('C:\\Users\\Dell\\Desktop\\Android Demo SDK\\sdk_test.jks')
-            keyAlias 'sdk_test'
-            storePassword '123456'
-            keyPassword '123456'
-        }
-    }
     compileSdkVersion 32
     buildToolsVersion "30.0.3"
 
@@ -38,7 +24,6 @@ android {
 
     productFlavors {
         dummy {
-            signingConfig signingConfigs.dummyRelease
             dimension "dummy_dim"
             versionNameSuffix ".dev"
             buildConfigField "String", "BASE_URL", "\"https://api-cereal-plant-css-build.apps.dev.use1.devops.syngentadigitalapps.com/\""
