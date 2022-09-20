@@ -39,7 +39,7 @@ android {
         }
 
         release {
-            minifyEnabled false
+            minifyEnabled true
         }
 
     }
@@ -136,7 +136,7 @@ afterEvaluate {
 
                 groupId = 'com.github.ibrahemsalah'
                 artifactId = 'sdk-demo'
-                version = '0.1.6'
+                version = '0.3.0'
             }
         }
     }
