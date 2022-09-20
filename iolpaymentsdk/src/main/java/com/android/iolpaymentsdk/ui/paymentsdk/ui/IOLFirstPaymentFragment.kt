@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.annotation.Keep
 import androidx.lifecycle.lifecycleScope
 import com.android.iolpaymentsdk.databinding.IolFragmentFirstPaymentBinding
 import com.android.iolpaymentsdk.di.SDKKoinComponent
@@ -13,7 +14,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-
+@Keep
 class IOLFirstPaymentFragment :
     IOLBaseViewModelFragment<IolFragmentFirstPaymentBinding>(), SDKKoinComponent {
 

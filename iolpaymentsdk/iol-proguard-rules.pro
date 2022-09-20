@@ -28,7 +28,7 @@
 
 
 
--keepnames class androidx.navigation.fragment.NavHostFragment
+-keep class com.android.iolpaymentsdk.ui.paymentsdk.ui.IOLFirstPaymentFragment
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
