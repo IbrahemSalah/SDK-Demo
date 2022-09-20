@@ -15,16 +15,16 @@ open class IOLBaseViewModel : ViewModel() {
     val error get() = _error.receiveAsFlow()
 
     internal val handler = CoroutineExceptionHandler { _, e ->
-        mutableIOLLoading.offer(IOLLoading.OnError)
+        mutableIOLLoading.trySend(IOLLoading.OnError)
         when (e) {
             is FailureException.NetworkException -> {
-                _error.offer(e)
+                _error.trySend(e)
             }
             is FailureException.InvalidUserException -> {
-                _error.offer(e)
+                _error.trySend(e)
             }
             else -> {
-                _error.offer(FailureException.FailedToConnectException("", -1))
+                _error.trySend  (FailureException.FailedToConnectException("", -1))
             }
         }
     }
