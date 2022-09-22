@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">IOL Pay Payment</string>
 
-    <string name="current_language">Spanish</string>
+    <string name="current_language">El idioma actual es español</string>
 
     <string name="connection_refused">Connection refused</string>
     <string name="session_expired">Session expired</string>
