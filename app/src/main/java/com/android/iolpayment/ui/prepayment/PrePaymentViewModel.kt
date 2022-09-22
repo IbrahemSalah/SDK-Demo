@@ -11,6 +11,7 @@ import com.android.iolpaymentsdk.ui.paymentsdk.IOLPaymentSDKHandler
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
+import java.util.*
 
 class PrePaymentViewModel(
     private val repository: Repository,
@@ -22,8 +23,8 @@ class PrePaymentViewModel(
 
     fun startPaymentSDK(context: Activity) {
         IOLPaymentSDKHandler.initializeIOLPaymentSDK(
-            context,
-            object : IOLPaymentSDKCallbacks {
+            context = context,
+            iolPaymentSDKCallbacks = object : IOLPaymentSDKCallbacks {
                 override fun onPrePayment() {
                     Toast.makeText(context, "Pre Payment Called", Toast.LENGTH_SHORT).show()
                     getDiscoveryMovieListFromServer()

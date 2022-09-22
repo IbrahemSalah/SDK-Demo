@@ -6,36 +6,42 @@
     android:gravity="center"
     android:orientation="vertical">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_24sdp"
+        android:text="@string/current_language"
+        android:textSize="@dimen/_14ssp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="24dp"
+        android:layout_margin="@dimen/_24sdp"
         android:text="Start Payment SDK" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_pre_payment"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:id="@+id/btn_pre_payment"
         android:layout_gravity="center"
+        android:layout_margin="@dimen/_24sdp"
         android:text="Call On PrePayment" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_payment_success"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_payment_success"
-        android:layout_margin="24dp"
         android:layout_gravity="center"
+        android:layout_margin="@dimen/_24sdp"
         android:text="Call On Payment Success" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="300dp"
         android:id="@+id/btn_payment_failure"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
         android:layout_gravity="center"
+        android:layout_margin="@dimen/_24sdp"
         android:text="Call On Payment Failure" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

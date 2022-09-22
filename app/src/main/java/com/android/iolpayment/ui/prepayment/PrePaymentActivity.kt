@@ -1,10 +1,10 @@
 package com.android.iolpayment.ui.prepayment
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.android.iolpayment.R
+import com.android.iolpayment.ui.base.BaseActivity
 
-class PrePaymentActivity : AppCompatActivity() {
+class PrePaymentActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)

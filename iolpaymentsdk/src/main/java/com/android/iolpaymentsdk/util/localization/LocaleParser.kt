@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.akexorcist.localizationactivity.core
+package com.android.iolpaymentsdk.util.localization
 
 import android.content.res.Configuration
 import android.os.Build

@@ -1,7 +1,6 @@
 package com.android.iolpayment.data
 
 import com.android.iolpayment.data.repositories.Repository
-import com.android.iolpaymentsdk.util.FirebaseUtils
 
 
 class SessionManager(val repository: Repository) {
@@ -29,7 +28,6 @@ class SessionManager(val repository: Repository) {
 
     fun logout() {
         repository.logOut()
-        FirebaseUtils.firebaseAuth.signOut()
     }
 
 }

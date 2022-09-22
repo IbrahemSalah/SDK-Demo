@@ -4,13 +4,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".ui.prepayment.PrePaymentFragment">
 
     <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_14ssp"
+        android:layout_margin="@dimen/_24sdp"
+        android:text="@string/current_language"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_switch_to_en"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_24sdp"
+        android:text="Switch To English Version"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_switch_to_it"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_24sdp"
+        android:text="Switch To Italian Version"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_start_payment"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_margin="@dimen/_24sdp"
         android:text="Start Payment SDK" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
